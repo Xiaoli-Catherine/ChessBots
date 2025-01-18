@@ -12,5 +12,5 @@ title:  Team
 ## Elijah Huang
 ***UCI Net ID***: elijahh2
 
-## USER 3
-***UCI Net ID***: ucinetid3
+## Mina Yoon
+***UCI Net ID***: jungmy1
