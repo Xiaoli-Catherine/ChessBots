@@ -6,7 +6,7 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1: Xiaoli Lan
+## Xiaoli Lan
 ***UCI Net ID***: 84006309
 
 ## USER 2
