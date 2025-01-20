@@ -7,7 +7,7 @@ title:  Team
 
 
 ## Xiaoli Lan
-***UCI Net ID***: 84006309
+***UCI Net ID***: lanx10
 
 ## Elijah Huang
 ***UCI Net ID***: elijahh2
