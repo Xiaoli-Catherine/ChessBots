@@ -3,8 +3,8 @@ layout: default
 title: Proposal
 ---
 
-Summary of the Project:
+##Summary of the Project:
 
-AI/ML Algorithms:
+##AI/ML Algorithms:
 
-Evaluation Plan:
+##Evaluation Plan:
