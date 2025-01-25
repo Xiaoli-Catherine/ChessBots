@@ -3,15 +3,15 @@ layout: default
 title: Proposal
 ---
 
-##Summary of the Project:
+## Summary of the Project:
 
 The goal of our project is to explore and analyze the performance of various algorithms within RLBench, focusing on a specific task where the robot must set up a checkerboard. RLBench is a large-scale benchmark and learning environment featuring 100 unique, hand-designed tasks designed for vision-guided robotic manipulation. For this project, the input will include task specifications and environmental observations, such as RGB, depth, and segmentation masks, while the output will involve the successful completion of the checkerboard setup task. Our approach involves experimenting with existing algorithms in the RLBench environment, tweaking them to improve their performance, and conducting a comparative study to understand the impact of these modifications. This project emphasizes learning from existing algorithms and making informed choices, such as selecting specific algorithms and explaining their relevance. The insights gained from this project can contribute to advancing robotic manipulation research, particularly in vision-guided tasks and algorithmic improvements.
 
-##AI/ML Algorithms:
+## AI/ML Algorithms:
 
 In this project, we use algorithms such as model-free, model-based, hierarchical RL, and imitation learning. Specifically, we start with Proximal Policy Optimization (PPO) as a baseline model-free RL algorithm to establish a foundational policy. Concurrently, we use Model Predictive Control (MPC) to plan actions by leveraging a predictive dynamics model of the environment. We bootstrap the learning process using imitation learning and employ hierarchical RL to divide the task into subgoals if needed.
 
-##Evaluation Plan:
+## Evaluation Plan:
 
 #### Quantitative Evaluation
 
