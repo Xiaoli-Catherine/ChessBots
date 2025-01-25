@@ -9,7 +9,7 @@ The goal of our project is to explore and analyze the performance of various alg
 
 ##AI/ML Algorithms:
 
-In this project, we may use algorithms such as model-free, model-based, hierarchical RL, and imitation learning. Specifically, we start with Proximal Policy Optimization (PPO) as a baseline model-free RL algorithm to establish a foundational policy. Concurrently, we use Model Predictive Control (MPC) to plan actions. We bootstrap the learning process using imitation learning and employ hierarchical RL to divide the task into subgoals if needed.
+In this project, we may use algorithms such as model-free, model-based, hierarchical RL, and imitation learning. Specifically, we start with Proximal Policy Optimization (PPO) as a baseline model-free RL algorithm to establish a foundational policy. Concurrently, we use Model Predictive Control (MPC) to plan actions by leveraging a predictive dynamics model of the environment. We bootstrap the learning process using imitation learning and employ hierarchical RL to divide the task into subgoals if needed.
 
 ##Evaluation Plan:
 
