@@ -8,6 +8,7 @@ Our project aims to explore and analyze the specific performance task of a robot
 
 #### Source code: 
 - [https://github.com/Xiaoli-Catherine/ChessBots](https://github.com/Xiaoli-Catherine/ChessBots)
+
 #### Online Resource: 
 - [https://github.com/stepjam/RLBench](https://github.com/stepjam/RLBench)
 
