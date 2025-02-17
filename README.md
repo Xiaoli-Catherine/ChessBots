@@ -1,2 +1,2 @@
 # ChessBots
-# This is a cs 175 project
+# CS 175: Projectin AI
