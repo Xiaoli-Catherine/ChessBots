@@ -21,4 +21,3 @@ Reports:
 - [Final](final.html)
 
 
-[quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
