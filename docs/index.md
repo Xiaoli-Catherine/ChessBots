@@ -13,7 +13,7 @@ Our project aims to explore and analyze the specific performance task of a robot
 - [https://github.com/stepjam/RLBench](https://github.com/stepjam/RLBench)
 
 #### Project Outcomes:
-The robot sets up a chessboard with the endpoints shown in the figure
+The robot sets up a chessboard with the endpoints shown as the figure
 ![image](https://github.com/user-attachments/assets/433d88c5-6642-4bdf-aac8-06088a5e3c5b)
 
 #### Reports:
