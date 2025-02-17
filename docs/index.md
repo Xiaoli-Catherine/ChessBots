@@ -14,7 +14,7 @@ Our project aims to explore and analyze the specific performance task of a robot
 
 #### Project Outcomes:
 The robot sets up a chessboard with the endpoints shown in the figure
-![image](https://github.com/user-attachments/assets/433d88c5-6642-4bdf-aac8-06088a5e3c5b)
+![image](https://github.com/user-attachments/assets/34ac1459-e1dc-4b30-975f-1b7c3866e979)
 
 #### Reports:
 
