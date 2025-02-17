@@ -1,2 +1,2 @@
-# Group-5
+# ChessBots
 # This is a cs 175 project
