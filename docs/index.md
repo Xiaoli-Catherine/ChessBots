@@ -4,7 +4,7 @@ title:  Home
 ---
 #### Project Outline:
 
-Our project aims to explore and analyze the specific performance task of a robot arm setting a chessboard. Our approach involves experimenting with existing algorithms in the RLBench environment, tweaking them to improve their performance, and conducting a comparative study to understand the impact of these modifications. 
+Our project aims to explore and analyze the specific performance task of a robot arm setting a chessboard with the RLBench environment. Our approach involves experimenting with existing algorithms in the RLBench environment, tweaking them to improve their performance, and conducting a comparative study to understand the impact of these modifications. 
 
 #### Source code: 
 - [https://github.com/Xiaoli-Catherine/ChessBots](https://github.com/Xiaoli-Catherine/ChessBots)
