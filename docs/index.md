@@ -13,13 +13,13 @@ Our project aims to explore and analyze the specific performance task of a robot
 - [https://github.com/stepjam/RLBench](https://github.com/stepjam/RLBench)
 
 #### Project Outcomes:
-The robot arm sets up a chessboard with the endpoints shown in the below figure
-
-<img src="https://github.com/user-attachments/assets/34ac1459-e1dc-4b30-975f-1b7c3866e979" width="350">
 
 The robot arm in the RlBench environment looks like the below image:
 
 <img width="500" alt="Screenshot 2025-02-21 at 2 30 50 PM" src="https://github.com/user-attachments/assets/5bd61a07-b1fa-4502-841c-78729e3b8e04" />
+The robot arm sets up a chessboard with the endpoints shown in the below figure
+
+<img src="https://github.com/user-attachments/assets/34ac1459-e1dc-4b30-975f-1b7c3866e979" width="350">
 
 #### Reports:
 
