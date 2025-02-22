@@ -32,7 +32,7 @@ Related source:
   
 Environment setup:
 
-We have set up a test RLBench environment that looks like
+By using gymnasium and rlbench, we have set up a test RLBench environment that looks like
 
 <img width="500" alt="Screenshot 2025-02-21 at 2 30 50 PM" src="https://github.com/user-attachments/assets/5bd61a07-b1fa-4502-841c-78729e3b8e04" />
 
