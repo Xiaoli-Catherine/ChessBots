@@ -71,4 +71,6 @@ By using gymnasium and rlbench, we have set up a test RLBench environment that l
 
 <img width="500" alt="Screenshot 2025-02-21 at 2 30 50 PM" src="https://github.com/user-attachments/assets/5bd61a07-b1fa-4502-841c-78729e3b8e04" />
 
+## Video Summary
 
+- [3 Minute Youtube Analysis](https://youtu.be/sbthP1GHLj4)
