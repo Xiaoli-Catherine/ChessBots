@@ -174,42 +174,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
 export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
 ```
 
-    frames.append(frame)
 
-print('Done')
-
-output_filename = 'robot_simulation.mp4'
-fps = 30
-
-imageio.mimwrite(output_filename, frames, fps=fps)
-
-print(f"Video saved as {output_filename}")
-
-fps_env = benchmark_step(env, target_duration=10)
-print(f"Environment FPS: {fps_env:.2f}")
-
-env.close()
-display.stop()
-```
-
-Create a corresponding `submit_test.sh`
-
-```
-#!/bin/bash
-#SBATCH -A cs175_class_gpu    ## Account to charge
-#SBATCH --time=04:00:00       ## Maximum running time of program
-#SBATCH --nodes=1             ## Number of nodes.
-                              ## Set to 1 if you are using GPU.
-#SBATCH --partition=gpu       ## Partition name
-#SBATCH --mem=30GB            ## Allocated Memory
-#SBATCH --cpus-per-task 8    ## Number of CPU cores
-#SBATCH --gres=gpu:V100:1     ## Type and the number of GPUs
-
-python test.py
-```
-
-Run the script
-
-```sh
-sbatch submit_test.sh
-```
