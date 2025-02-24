@@ -126,7 +126,7 @@ fps = 30
 imageio.mimwrite(output_filename, frames, fps=fps)
 print(f"Video saved as {output_filename}")
 
-env.close(
+env.close()
 ```
 
 Create a corresponding `submit_test.sh`
@@ -151,7 +151,7 @@ sleep 2
 # Run script
 python -u test.py
 
-killall Xvf
+killall Xvfb
 ```
 
 Run the script
