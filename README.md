@@ -15,4 +15,4 @@ download the compressed repository and then pip install directly.
 3. Run headless by starting an xvfb server similar to x server from
 1. https://github.com/stepjam/PyRep?tab=readme-ov-file#running-
 headless
-For the details of setting up the environment please look at 
+For the details of setting up the environment please look at the RLBench Setup for HPC3.pdf or RLBench Setup for HPC3.md
