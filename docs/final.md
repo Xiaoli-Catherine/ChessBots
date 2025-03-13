@@ -2,6 +2,15 @@
 layout: default
 title: Final Report
 ---
-# Video
+## Video
 
-#
+## Project Summary
+
+
+## Approaches
+
+## Evaluation
+
+## References
+
+## AI Tool Usage
