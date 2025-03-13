@@ -21,6 +21,7 @@ Clip parameter: 0.2
 Number of epochs per update: 10
 Mini-batch size: 64
 Discount factor: 0.99
+Then we trained the modal with the learning rate at 1e-3, 3e-3, 1e-2, 1e-4, 3e-5, and 1e-5 in order to get a better learning rate for our model.
 Alongside PPO, we integrate Model Predictive Control (MPC) to introduce a model-based planning component. MPC uses a learned dynamics model to predict future states and optimize action sequences accordingly. This helps in cases where pure model-free RL struggles with complex dependencies in the checkerboard setup.
 
 For hierarchical structure, we employ Hierarchical Reinforcement Learning (HRL), breaking down the task into sub-goals such as:
