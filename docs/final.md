@@ -95,3 +95,4 @@ Related source:
 -  [ https://peract.github.io/](https://peract.github.io/)
 
 ## AI Tool Usage
+We have used ChatGPT to ask questions and debug, and we also used OpenAI’s default PPO settings for our PPO training model
