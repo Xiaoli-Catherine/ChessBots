@@ -83,6 +83,7 @@ To further enhance model performance, we plan to:
 * Although we have not yet achieved a perfect solution, our current progress lays a solid foundation for further improvements, and we remain optimistic about refining the model.
 
 The following image is the screenshot from our training video
+
 <img width="491" alt="Screenshot 2025-03-14 at 2 59 48 PM" src="https://github.com/user-attachments/assets/2abc0409-54ec-4889-9666-658d47772a0c" />
 
 
