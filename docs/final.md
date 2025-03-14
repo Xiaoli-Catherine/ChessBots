@@ -17,13 +17,20 @@ To tackle the checkerboard setup task, we primarily use Proximal Policy Optimiza
 
 $\(L(\theta) = \mathbb{E}_t \left[ \min(r_t(\theta) A_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) A_t ) \right]\)$
 
-where $r_t(\theta)$ is the probability ratio between the new and old policies, $A_t$ is the advantage function, and  is a small constant (default is 0.2). We set hyperparameters based on OpenAI’s default PPO settings, adjusting them as necessary:
+where $r_t(\theta)$ is the probability ratio between the new and old policies, $A_t$ is the advantage function, and  is a small constant (default is 0.2). We set hyperparameters based on OpenAI’s default PPO settings and then adjust them as necessary.
+
+The OpenAI’s default PPO settings:
 
 Learning rate: 3e-4
+
 Clip parameter: 0.2
+
 Number of epochs per update: 10
+
 Mini-batch size: 64
+
 Discount factor: 0.99
+
 Then we trained the modal with the learning rate at 1e-3, 3e-3, 1e-2, 1e-4, 3e-5, and 1e-5 in order to get a better learning rate for our model.
 Alongside PPO, we integrate Model Predictive Control (MPC) to introduce a model-based planning component. MPC uses a learned dynamics model to predict future states and optimize action sequences accordingly. This helps in cases where pure model-free RL struggles with complex dependencies in the checkerboard setup.
 
