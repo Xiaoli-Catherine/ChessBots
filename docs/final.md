@@ -40,16 +40,41 @@ Each sub-goal is managed by a lower-level policy, while a high-level policy orch
 We evaluate our models over 500,000 training steps, analyzing performance in terms of task success rate, execution time, and reward accumulation. Our experiments involve ablations, such as removing hierarchical structures or imitation learning, to measure their individual contributions.
 ## Evaluation
 #### Quantitative Evaluation
-The first problem that we meet is the environment setup. For example, we have to use the Ubuntu18_04 version of CoppeliaSim since 20_04 requires GLIBC=2.29 (for pyrep) and Rocky 8.10 Green Obsidian only has GLIBC=2.28. Our remote machine can't git clone for some reason so manually download the compressed repository and then pip install directly. Also, we don't have the privileges to use sudo. After getting help from the TA, we set our environment up successfully. We also build a "[RLBench Setup for HPC3.md](https://github.com/Xiaoli-Catherine/ChessBots/blob/main/RLBench/RLBench%20Setup%20for%20HPC3.md)" for future people to set up the RLBench in HPC3. After the environment setup, we got a test video of the environment test, it was the first success we made in this project. The following picture is the screenshot of the RLBench environment test.
+
+
+#### Qualitative Evaluation
+Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
+
+1. Environment Setup & Initial Breakthroughs
+The first major hurdle was setting up the environment on HPC3. Due to system constraints, we had to use Ubuntu 18.04 instead of 20.04, as RLBench’s dependencies required GLIBC 2.29, which was not available on Rocky 8.10 (limited to GLIBC 2.28). Additionally, the remote machine had cloning restrictions, forcing us to manually download and install dependencies. Without sudo privileges, installation required workarounds, and we ultimately succeeded with guidance from the TA.
+
+To assist future users, we documented the setup process in "[RLBench Setup for HPC3.md](https://github.com/Xiaoli-Catherine/ChessBots/blob/main/RLBench/RLBench%20Setup%20for%20HPC3.md)", which serves as a detailed guide to configuring RLBench on HPC3 efficiently. Once the environment was fully operational, we successfully ran a test video, validating our setup and marking our first tangible success. The following picture is the screenshot of the RLBench environment test.
 
 <img width="500" alt="Screenshot 2025-02-21 at 2 30 50 PM" src="https://github.com/user-attachments/assets/5bd61a07-b1fa-4502-841c-78729e3b8e04" />
 
 Screenshot of the output of RLBench environment test
 
-To achieve the project goals, we used PPO as the training model. We trained multiple PPO models and observed the impact of different parameters to obtain a better model. However, we have not gained a satisfying model so far even though we have tried many different parameters.
+2. Training Experience & Observations
+We selected Proximal Policy Optimization (PPO) as our reinforcement learning model. During training, we experimented with various hyperparameters, observing their effects on performance. While we expected PPO to gradually refine its actions, early results were inconsistent, with the robot arm struggling to complete the task reliably.
 
-#### Qualitative Evaluation
-We will observe if our modifications in the algorithm improve the system’s adaptability and efficiency, particularly in precision placement and reduced execution time. For now, we just completed the RLBench environment setup. The output shows the RLBench environment works well. Meanwhile, we want to make sure we have to make logical decisions and choices along the way. We make educated guesses about what could work, try it, see the result, and use that to continue making guesses. The key idea here is to make sure that we have learned something during the project.
+Key qualitative observations included:
+
+Exploration vs. Exploitation Tradeoff: Initial policies led to erratic movements, suggesting inadequate exploration. Adjusting entropy and reward shaping helped improve behavior.
+Task Complexity: The checkerbot setup requires precise control, making it a challenging RLBench task. The robot often struggled with fine motor control, indicating the need for better reward shaping or additional auxiliary tasks.
+Impact of Environment Variability: Minor variations in simulation conditions significantly impacted training consistency. We considered using domain randomization to enhance robustness.
+3. Challenges & Lessons Learned
+One of the main challenges was achieving stable and meaningful learning progress. Despite multiple training attempts, we have yet to develop a fully functional model that reliably completes the task. However, this process has provided valuable lessons:
+
+System constraints can significantly affect project feasibility, requiring adaptability in software and hardware choices.
+Hyperparameter tuning is non-trivial, and small adjustments can lead to drastically different learning behaviors.
+Reinforcement learning for robotic control is highly sensitive to reward shaping and environment design, emphasizing the need for careful engineering of learning conditions.
+4. Future Improvements & Next Steps
+To further enhance model performance, we plan to:
+
+Try alternative RL algorithms such as Soft Actor-Critic (SAC) or hybrid approaches to improve stability.
+Implement curriculum learning by progressively increasing task complexity.
+Enhance reward shaping to provide better feedback and accelerate learning.
+Although we have not yet achieved a perfect solution, our current progress lays a solid foundation for further improvements, and we remain optimistic about refining the model.
 
 
 ## References
