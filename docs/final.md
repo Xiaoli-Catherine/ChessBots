@@ -46,6 +46,7 @@ We evaluate our models over 500,000 training steps, analyzing performance in ter
 Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
 
 1. Environment Setup & Initial Breakthroughs
+   
 The first major hurdle was setting up the environment on HPC3. Due to system constraints, we had to use Ubuntu 18.04 instead of 20.04, as RLBench’s dependencies required GLIBC 2.29, which was not available on Rocky 8.10 (limited to GLIBC 2.28). Additionally, the remote machine had cloning restrictions, forcing us to manually download and install dependencies. Without sudo privileges, installation required workarounds, and we ultimately succeeded with guidance from the TA.
 
 To assist future users, we documented the setup process in "[RLBench Setup for HPC3.md](https://github.com/Xiaoli-Catherine/ChessBots/blob/main/RLBench/RLBench%20Setup%20for%20HPC3.md)", which serves as a detailed guide to configuring RLBench on HPC3 efficiently. Once the environment was fully operational, we successfully ran a test video, validating our setup and marking our first tangible success. The following picture is the screenshot of the RLBench environment test.
@@ -55,26 +56,31 @@ To assist future users, we documented the setup process in "[RLBench Setup for H
 Screenshot of the output of RLBench environment test
 
 2. Training Experience & Observations
+   
 We selected Proximal Policy Optimization (PPO) as our reinforcement learning model. During training, we experimented with various hyperparameters, observing their effects on performance. While we expected PPO to gradually refine its actions, early results were inconsistent, with the robot arm struggling to complete the task reliably.
 
 Key qualitative observations included:
 
-Exploration vs. Exploitation Tradeoff: Initial policies led to erratic movements, suggesting inadequate exploration. Adjusting entropy and reward shaping helped improve behavior.
-Task Complexity: The checkerbot setup requires precise control, making it a challenging RLBench task. The robot often struggled with fine motor control, indicating the need for better reward shaping or additional auxiliary tasks.
-Impact of Environment Variability: Minor variations in simulation conditions significantly impacted training consistency. We considered using domain randomization to enhance robustness.
+* Exploration vs. Exploitation Tradeoff: Initial policies led to erratic movements, suggesting inadequate exploration. Adjusting entropy and reward shaping helped improve behavior.
+* Task Complexity: The checkerbot setup requires precise control, making it a challenging RLBench task. The robot often struggled with fine motor control, indicating the need for better reward shaping or additional auxiliary tasks.
+* Impact of Environment Variability: Minor variations in simulation conditions significantly impacted training consistency. We considered using domain randomization to enhance robustness.
+  
 3. Challenges & Lessons Learned
+   
 One of the main challenges was achieving stable and meaningful learning progress. Despite multiple training attempts, we have yet to develop a fully functional model that reliably completes the task. However, this process has provided valuable lessons:
 
 System constraints can significantly affect project feasibility, requiring adaptability in software and hardware choices.
 Hyperparameter tuning is non-trivial, and small adjustments can lead to drastically different learning behaviors.
 Reinforcement learning for robotic control is highly sensitive to reward shaping and environment design, emphasizing the need for careful engineering of learning conditions.
+
 4. Future Improvements & Next Steps
+   
 To further enhance model performance, we plan to:
 
-Try alternative RL algorithms such as Soft Actor-Critic (SAC) or hybrid approaches to improve stability.
-Implement curriculum learning by progressively increasing task complexity.
-Enhance reward shaping to provide better feedback and accelerate learning.
-Although we have not yet achieved a perfect solution, our current progress lays a solid foundation for further improvements, and we remain optimistic about refining the model.
+* Try alternative RL algorithms such as Soft Actor-Critic (SAC) or hybrid approaches to improve stability.
+* Implement curriculum learning by progressively increasing task complexity.
+* Enhance reward shaping to provide better feedback and accelerate learning.
+* Although we have not yet achieved a perfect solution, our current progress lays a solid foundation for further improvements, and we remain optimistic about refining the model.
 
 
 ## References
