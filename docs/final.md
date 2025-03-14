@@ -20,29 +20,11 @@ $\(L(\theta) = \mathbb{E}_t \left[ \min(r_t(\theta) A_t, \text{clip}(r_t(\theta)
 where $r_t(\theta)$ is the probability ratio between the new and old policies, $A_t$ is the advantage function, and  is a small constant (default is 0.2). We set hyperparameters based on OpenAI’s default PPO settings and then adjust them as necessary.
 
 The OpenAI’s default PPO settings:
-model = PPO(
-    "MultiInputPolicy",
-    env,
-    verbose=1,
-    learning_rate=3e-4,
-    n_steps=2048,  # Number of steps to run for each environment per update
-    batch_size=64,  # Mini-batch size
-    n_epochs=10,  # Number of epochs for optimization
-    gamma=0.99,  # Discount factor
-    gae_lambda=0.95,  # GAE parameter
-    clip_range=0.2,  # PPO clip parameter
-    ent_coef=0.0,  # Entropy coefficient
-    max_grad_norm=0.5,  # Maximum gradient norm
-)
-Learning rate: 3e-4
-
-Clip parameter: 0.2
-
-Number of epochs per update: 10
-
-Mini-batch size: 64
-
-Discount factor: 0.99
+* Learning rate: 3e-4
+* Clip parameter: 0.2
+* Number of epochs per update: 10
+* Mini-batch size: 64
+* Discount factor: 0.99
 
 Then we trained the modal with the learning rate at 1e-3, 3e-3, 1e-2, 1e-4, 3e-5, 1e-5, etc in order to get a better learning rate for our model. We also change the batch size to 128 or 256 to see the effects. We also tweaked the clip range and entropy coefficient for improvements.
 
