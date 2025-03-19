@@ -41,8 +41,16 @@ We evaluate our models over 500,000 training steps, analyzing performance in ter
 ## Evaluation
 Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
 #### Quantitative Evaluation
-![img width="500" top_configurations_table](https://github.com/user-attachments/assets/c8413614-dd0c-4fa9-b0b0-7e18a1d9b7f7)
 
+![top_configurations_table](https://github.com/user-attachments/assets/c8413614-dd0c-4fa9-b0b0-7e18a1d9b7f7)
+
+<img width="500" alt="Screenshot 2025-03-19 at 12 10 09 PM" src="https://github.com/user-attachments/assets/1b7a7f5e-433c-4bf7-8127-ede3f89c95e6" />
+
+<img width="500" alt="Screenshot 2025-03-19 at 12 10 22 PM" src="https://github.com/user-attachments/assets/3e6c555c-eaae-4222-9df2-da8aa5481faf" />
+
+<img width="500" alt="Screenshot 2025-03-19 at 12 10 31 PM" src="https://github.com/user-attachments/assets/a2e906be-711d-4df4-8051-ea4e68e54d2e" />
+
+<img width="500" alt="Screenshot 2025-03-19 at 12 11 02 PM" src="https://github.com/user-attachments/assets/12ee1dbb-723d-41c4-9fb9-ae5c74b374b8" />
 
 #### Qualitative Evaluation
 
