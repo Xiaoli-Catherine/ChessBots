@@ -56,7 +56,7 @@ From the top 18 hyperparameter configurations, we observed:
 * Increasing the clip range to 0.30 tended to improve results, indicating better gradient stability.
 * Lower entropy coefficients 0.01 and 0.003 generally resulted in poorer performance, suggesting insufficient exploration.
 
-2. Training Performance & Learning Progress
+2. Training Performance & Progress
    
 <img width="800" alt="Screenshot 2025-03-19 at 4 20 09 PM" src="https://github.com/user-attachments/assets/28b59a75-fea4-4ee2-a9c3-0037219dc5ff" />
 
