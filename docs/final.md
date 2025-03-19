@@ -45,6 +45,7 @@ We evaluate our models over 500,000 training steps, analyzing performance in ter
 Our project aims to optimize PPO-based reinforcement learning for a robotic arm setup of a checkerboard using RLBench. We conducted hyperparameter tuning and analyzed training performance through various metrics, including mean episode reward, training stability, and hyperparameter sensitivity.
 
 1. Hyperparameter Tuning & Impact Analysis
+   
 We experimented with learning rate, clip range, and entropy coefficient to assess their impact on performance. The top 18 configurations ranked by mean reward are summarized in the table below:
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 14 29 PM" src="https://github.com/user-attachments/assets/b8ae0476-9da6-4fd2-96cb-c566bb95fd9f" />
