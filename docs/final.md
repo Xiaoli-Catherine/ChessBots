@@ -72,7 +72,7 @@ These trends suggest effective policy optimization, though further fine-tuning i
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 31 PM" src="https://github.com/user-attachments/assets/a2e906be-711d-4df4-8051-ea4e68e54d2e" />
 
-From above heatmaps and bar charts:
+From above heatmaps and bar charts groups, we learned:
 
 * Learning rate of 3.0e-04 generally led to worse performance (-7.95 mean reward in some cases).
 * Clip range of 0.30 was more beneficial than 0.20, providing smoother training curves.
@@ -80,7 +80,7 @@ From above heatmaps and bar charts:
   
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 09 PM" src="https://github.com/user-attachments/assets/1b7a7f5e-433c-4bf7-8127-ede3f89c95e6" />
 
-Above is the picture for meshgrid groups for different parameter interactions. The meshgrid plots further highlight interactions between hyperparameters:
+Above is the picture of meshgrid groups for different parameter interactions. The meshgrid plots further highlight interactions between hyperparameters:
 
 * Increasing clip range improved reward stability.
 * Higher entropy coefficients led to performance drops in some cases.
