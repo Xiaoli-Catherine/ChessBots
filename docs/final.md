@@ -59,6 +59,7 @@ From the top 18 hyperparameter configurations, we observed:
 2. Training Performance & Learning Progress
    
 <img width="500" alt="Screenshot 2025-03-19 at 12 11 02 PM" src="https://github.com/user-attachments/assets/12ee1dbb-723d-41c4-9fb9-ae5c74b374b8" />
+
 Above are the graphs of the training progress at different steps. From the training progress graphs, we observed:
 
 * At 1.2M steps, the moving average reward steadily increased, showing learning stability.
@@ -72,11 +73,12 @@ These trends suggest effective policy optimization, though further fine-tuning i
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 31 PM" src="https://github.com/user-attachments/assets/a2e906be-711d-4df4-8051-ea4e68e54d2e" />
 
-From the above bar charts and heatmaps groups, we learned:
+From the above bar charts and heatmaps graphs, we learned:
 
 * The mean episode reward is roughly similar across all learning rates, but there is a slight downward trend as the learning rate increases.
 * A clip range of 0.30 was more beneficial than 0.20 when the learning rate is 0.0003, providing smoother training curves.
 * An entropy coefficient of 0.03 presents the best result in the reward in all learning rates.
+  
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 09 PM" src="https://github.com/user-attachments/assets/1b7a7f5e-433c-4bf7-8127-ede3f89c95e6" />
 
 Above is the picture of meshgrid groups for different parameter interactions. The meshgrid plots further highlight interactions between hyperparameters:
