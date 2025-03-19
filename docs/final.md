@@ -72,7 +72,7 @@ These trends suggest effective policy optimization, though further fine-tuning i
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 31 PM" src="https://github.com/user-attachments/assets/a2e906be-711d-4df4-8051-ea4e68e54d2e" />
 
-From above heatmaps and bar charts groups, we learned:
+From above bar charts and heatmaps groups, we learned:
 
 * The mean episode reward is roughly similar across all learning rates, but there is a slight downward trend as the learning rate increases.
 * A clip range of 0.30 was more beneficial than 0.20 when the learning rate is 0.0003, providing smoother training curves.
