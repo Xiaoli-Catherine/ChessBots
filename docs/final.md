@@ -39,10 +39,21 @@ Each sub-goal is managed by a lower-level policy, while a high-level policy orch
 
 We evaluate our models over 500,000 training steps, analyzing performance in terms of task success rate, execution time, and reward accumulation. Our experiments involve ablations, such as removing hierarchical structures or imitation learning, to measure their individual contributions.
 ## Evaluation
-Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
+
 #### Quantitative Evaluation
 
+Our project aims to optimize PPO-based reinforcement learning for a robotic arm setup of a checkerboard using RLBench. We conducted hyperparameter tuning and analyzed training performance through various metrics, including mean episode reward, training stability, and hyperparameter sensitivity.
+
+1. Hyperparameter Tuning & Impact Analysis
+We experimented with learning rate, clip range, and entropy coefficient to assess their impact on performance. The top 18 configurations ranked by mean reward are summarized in the table below:
+
 <img width="500" alt="Screenshot 2025-03-19 at 12 14 29 PM" src="https://github.com/user-attachments/assets/b8ae0476-9da6-4fd2-96cb-c566bb95fd9f" />
+
+From the picture, we observed:
+
+* The best-performing configuration used a learning rate of 3.0e-05, a clip range of 0.30, and an entropy coefficient of 0.030, achieving a mean reward of -6.47.
+* Increasing the clip range to 0.30 tended to improve results, indicating better gradient stability.
+* Lower entropy coefficients (0.003) generally resulted in poorer performance, suggesting insufficient exploration.
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 09 PM" src="https://github.com/user-attachments/assets/1b7a7f5e-433c-4bf7-8127-ede3f89c95e6" />
 
@@ -53,10 +64,11 @@ Our project focuses on using RLBench to train a robot arm for setting up a check
 <img width="500" alt="Screenshot 2025-03-19 at 12 11 02 PM" src="https://github.com/user-attachments/assets/12ee1dbb-723d-41c4-9fb9-ae5c74b374b8" />
 
 #### Qualitative Evaluation
+Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
 
 1. Environment Setup & Initial Breakthroughs
    
-The first major hurdle was setting up the environment on HPC3. Due to system constraints, we had to use Ubuntu 18.04 instead of 20.04, as RLBench’s dependencies required GLIBC 2.29, which was not available on Rocky 8.10 (limited to GLIBC 2.28). Additionally, the remote machine had cloning restrictions, forcing us to manually download and install dependencies. Without sudo privileges, installation required workarounds, and we ultimately succeeded with guidance from the TA.
+The first major hurdle was setting up the environment on HPC3. First, we lacked sudo privileges, so we could not follow the official installation guide. Due to system constraints, we had to use Ubuntu 18.04 instead of 20.04, as RLBench’s dependencies required GLIBC 2.29, which was not available on Rocky 8.10 (limited to GLIBC 2.28). Additionally, the remote machine had cloning restrictions, forcing us to manually download and install dependencies. Fortunately, we ultimately succeeded with guidance from the TA.
 
 To assist future users, we documented the setup process in "[RLBench Setup for HPC3.md](https://github.com/Xiaoli-Catherine/ChessBots/blob/main/RLBench/RLBench%20Setup%20for%20HPC3.md)", which serves as a detailed guide to configuring RLBench on HPC3 efficiently. Once the environment was fully operational, we successfully ran a test video, validating our setup and marking our first tangible success. The following picture is the screenshot of the RLBench environment test.
 
@@ -78,7 +90,6 @@ Key qualitative observations included:
    
 One of the main challenges was achieving stable and meaningful learning progress. Despite multiple training attempts, we have yet to develop a fully functional model that reliably completes the task. However, this process has provided valuable lessons:
 
-System constraints can significantly affect project feasibility, requiring adaptability in software and hardware choices.
 Hyperparameter tuning is non-trivial, and small adjustments can lead to drastically different learning behaviors.
 Reinforcement learning for robotic control is highly sensitive to reward shaping and environment design, emphasizing the need for careful engineering of learning conditions.
 
