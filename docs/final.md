@@ -56,13 +56,36 @@ From the top 18 hyperparameter configurations, we observed:
 * Increasing the clip range to 0.30 tended to improve results, indicating better gradient stability.
 * Lower entropy coefficients (0.003) generally resulted in poorer performance, suggesting insufficient exploration.
 
+2. Training Performance & Learning Progress
+   
+   <img width="500" alt="Screenshot 2025-03-19 at 12 11 02 PM" src="https://github.com/user-attachments/assets/12ee1dbb-723d-41c4-9fb9-ae5c74b374b8" />
+Above are the graphs of the training progress at different steps. From the training progress graphs, we observed:
+
+* At 1.2M steps, the moving average reward steadily increased, showing learning stability.
+* At 1M steps, the model achieved a more consistent reward curve with less variance.
+* Penalty for knockovers (task failures) significantly impacted early training performance, but the model adapted over time.
+These trends suggest effective policy optimization, though further fine-tuning is needed.
+
+3. Hyperparameter Influence on Performance
+   
+From the heatmaps and bar charts:
+
+* Learning rate of 3.0e-04 generally led to worse performance (-7.95 mean reward in some cases).
+* Clip range of 0.30 was more beneficial than 0.20, providing smoother training curves.
+* Entropy coefficient of 0.010 showed mixed results, requiring further tuning.
+  
+The meshgrid plots further highlight interactions between hyperparameters:
+
+* Increasing clip range improved reward stability.
+* Higher entropy coefficients led to performance drops in some cases.
+
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 09 PM" src="https://github.com/user-attachments/assets/1b7a7f5e-433c-4bf7-8127-ede3f89c95e6" />
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 22 PM" src="https://github.com/user-attachments/assets/3e6c555c-eaae-4222-9df2-da8aa5481faf" />
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 31 PM" src="https://github.com/user-attachments/assets/a2e906be-711d-4df4-8051-ea4e68e54d2e" />
 
-<img width="500" alt="Screenshot 2025-03-19 at 12 11 02 PM" src="https://github.com/user-attachments/assets/12ee1dbb-723d-41c4-9fb9-ae5c74b374b8" />
+
 
 #### Qualitative Evaluation
 Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
