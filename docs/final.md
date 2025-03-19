@@ -76,7 +76,7 @@ These trends suggest effective policy optimization, though further fine-tuning i
 From the above bar charts and heatmaps graphs, we learned:
 
 * The mean episode reward is roughly similar across all learning rates, but there is a slight downward trend as the learning rate increases.
-* A clip range of 0.30 was more beneficial than 0.20 when the learning rate is 0.0003, providing smoother training curves.
+* A clip range of 0.30 was more beneficial than 0.20 when the learning rate is 0.0003.
 * An entropy coefficient of 0.03 presents the best result in the reward in all learning rates.
   
 <img width="500" alt="Screenshot 2025-03-19 at 12 10 09 PM" src="https://github.com/user-attachments/assets/1b7a7f5e-433c-4bf7-8127-ede3f89c95e6" />
