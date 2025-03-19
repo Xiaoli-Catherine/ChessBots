@@ -58,7 +58,7 @@ From the top 18 hyperparameter configurations, we observed:
 
 2. Training Performance & Learning Progress
    
-<img width="500" alt="Screenshot 2025-03-19 at 4 20 09 PM" src="https://github.com/user-attachments/assets/28b59a75-fea4-4ee2-a9c3-0037219dc5ff" />
+<img width="800" alt="Screenshot 2025-03-19 at 4 20 09 PM" src="https://github.com/user-attachments/assets/28b59a75-fea4-4ee2-a9c3-0037219dc5ff" />
 
 Above are the graphs of the training progress at different steps. From the training progress graphs, we observed:
 
