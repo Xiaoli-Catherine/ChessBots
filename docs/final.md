@@ -39,11 +39,12 @@ Each sub-goal is managed by a lower-level policy, while a high-level policy orch
 
 We evaluate our models over 500,000 training steps, analyzing performance in terms of task success rate, execution time, and reward accumulation. Our experiments involve ablations, such as removing hierarchical structures or imitation learning, to measure their individual contributions.
 ## Evaluation
+Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
 #### Quantitative Evaluation
+![top_configurations_table](https://github.com/user-attachments/assets/c8413614-dd0c-4fa9-b0b0-7e18a1d9b7f7)
 
 
 #### Qualitative Evaluation
-Our project focuses on using RLBench to train a robot arm for setting up a checkerbot. Throughout the development process, we encountered several challenges, made key observations, and refined our approach based on qualitative insights.
 
 1. Environment Setup & Initial Breakthroughs
    
