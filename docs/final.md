@@ -50,7 +50,7 @@ We experimented with learning rate, clip range, and entropy coefficient to asses
 
 <img width="500" alt="Screenshot 2025-03-19 at 12 14 29 PM" src="https://github.com/user-attachments/assets/b8ae0476-9da6-4fd2-96cb-c566bb95fd9f" />
 
-From the picture, we observed:
+From the top 18 hyperparameter configurations, we observed:
 
 * The best-performing configuration used a learning rate of 3.0e-05, a clip range of 0.30, and an entropy coefficient of 0.030, achieving a mean reward of -6.47.
 * Increasing the clip range to 0.30 tended to improve results, indicating better gradient stability.
